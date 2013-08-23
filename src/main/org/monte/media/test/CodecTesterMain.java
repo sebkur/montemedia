@@ -10,14 +10,15 @@
  */
 package org.monte.media.test;
 
-import org.monte.media.VideoFormatKeys;
-import org.monte.media.avi.AVIWriter;
-import org.monte.media.color.Colors;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
+
+import org.monte.media.VideoFormatKeys;
+import org.monte.media.avi.AVIWriter;
+import org.monte.media.color.Colors;
 
 /**
  * Renders the following test animation sequence:

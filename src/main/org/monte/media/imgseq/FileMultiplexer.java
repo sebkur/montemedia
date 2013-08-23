@@ -10,13 +10,15 @@
  */
 package org.monte.media.imgseq;
 
-import org.monte.media.Buffer;
-import org.monte.media.Multiplexer;
+import static org.monte.media.BufferFlag.DISCARD;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.Buffer;
+import org.monte.media.Multiplexer;
 
 /**
  * Multiplexes samples into individual files.

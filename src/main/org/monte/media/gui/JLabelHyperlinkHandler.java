@@ -18,6 +18,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+
 import javax.accessibility.AccessibleText;
 import javax.swing.JLabel;
 import javax.swing.text.AttributeSet;

@@ -15,6 +15,7 @@ import java.awt.image.IndexColorModel;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteOrder;
+
 import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.MemoryCacheImageInputStream;
 

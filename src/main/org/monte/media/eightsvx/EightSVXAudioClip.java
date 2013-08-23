@@ -53,12 +53,9 @@
  */
 package org.monte.media.eightsvx;
 
-import java.lang.Object;
-import java.io.*;
-
 import java.applet.AudioClip;
-import sun.applet.AppletAudioClip;
-import java.lang.reflect.*;
+import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * Represents an audio sample of type IFF 8SVX.

@@ -10,9 +10,6 @@
  */
 package org.monte.media.riff;
 
-import org.monte.media.AbortException;
-import org.monte.media.ParseException;
-import org.monte.media.io.ImageInputStreamAdapter;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +18,12 @@ import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.WeakHashMap;
+
 import javax.imageio.stream.ImageInputStream;
+
+import org.monte.media.AbortException;
+import org.monte.media.ParseException;
+import org.monte.media.io.ImageInputStreamAdapter;
 
 /**
  * Interprets Resource Interchange File Format (RIFF) streams.

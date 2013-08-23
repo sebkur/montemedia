@@ -10,29 +10,30 @@
  */
 package org.monte.media.mpo;
 
-import org.monte.media.io.SubImageInputStream;
-import org.monte.media.exif.DefaultIIOMetadata;
-import org.monte.media.exif.EXIFReader;
-import org.monte.media.exif.EXIFTagSet;
-import org.monte.media.exif.MPEntryTagSet;
-import org.monte.media.exif.MPFTagSet;
-import org.monte.media.tiff.TIFFDirectory;
-import org.monte.media.tiff.TIFFField;
-import org.monte.media.tiff.TIFFNode;
-import org.monte.media.tiff.TIFFTag;
-import com.sun.imageio.plugins.jpeg.JPEGImageReader;
 import java.awt.image.BufferedImage;
 import java.awt.image.DirectColorModel;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+
 import javax.imageio.ImageReadParam;
 import javax.imageio.ImageReader;
 import javax.imageio.ImageTypeSpecifier;
 import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.stream.ImageInputStream;
+
+import org.monte.media.exif.DefaultIIOMetadata;
+import org.monte.media.exif.EXIFReader;
+import org.monte.media.exif.EXIFTagSet;
+import org.monte.media.exif.MPEntryTagSet;
+import org.monte.media.exif.MPFTagSet;
+import org.monte.media.io.SubImageInputStream;
 import org.monte.media.jpeg.CMYKJPEGImageReader;
+import org.monte.media.tiff.TIFFDirectory;
+import org.monte.media.tiff.TIFFField;
+import org.monte.media.tiff.TIFFNode;
+import org.monte.media.tiff.TIFFTag;
 
 /**
  * Reads an image in the MultiPicture Object format (MPO).

@@ -10,16 +10,18 @@
  */
 package org.monte.movieconverter;
 
-import org.monte.media.Buffer;
-import org.monte.media.Movie;
-import org.monte.media.gui.Worker;
-import org.monte.media.math.Rational;
 import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 import javax.swing.TransferHandler;
+
+import org.monte.media.Buffer;
+import org.monte.media.Movie;
+import org.monte.media.gui.Worker;
+import org.monte.media.math.Rational;
 
 
 /**

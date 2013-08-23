@@ -10,16 +10,17 @@
  */
 package org.monte.media.test;
 
-import org.monte.media.VideoFormatKeys;
-import org.monte.media.avi.AVIWriter;
-import org.monte.media.color.Colors;
-import org.monte.media.quicktime.QuickTimeWriter;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
+
+import org.monte.media.VideoFormatKeys;
+import org.monte.media.avi.AVIWriter;
+import org.monte.media.color.Colors;
+import org.monte.media.quicktime.QuickTimeWriter;
 
 /**
  * {@code ColorTesterMain}.

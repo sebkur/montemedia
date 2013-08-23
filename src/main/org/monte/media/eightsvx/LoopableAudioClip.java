@@ -11,7 +11,7 @@
 
 package org.monte.media.eightsvx;
 
-import java.applet.*;
+import java.applet.AudioClip;
 /**
  * LoopableAudioClip.
  *

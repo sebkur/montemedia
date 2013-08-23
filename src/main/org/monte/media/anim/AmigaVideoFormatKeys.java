@@ -10,12 +10,13 @@
  */
 package org.monte.media.anim;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.monte.media.Format;
 import org.monte.media.FormatKey;
 import org.monte.media.VideoFormatKeys;
 import org.monte.media.math.Rational;
-import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * {@code AmigaVideoFormatKeys}.

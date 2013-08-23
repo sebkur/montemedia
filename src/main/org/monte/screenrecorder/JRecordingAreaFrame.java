@@ -10,7 +10,9 @@
  */
 package org.monte.screenrecorder;
 
-import com.sun.awt.AWTUtilities;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -25,10 +27,12 @@ import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import static java.lang.Math.*;
+
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
+
+import com.sun.awt.AWTUtilities;
 
 /**
  * JRecordingAreaFrame.

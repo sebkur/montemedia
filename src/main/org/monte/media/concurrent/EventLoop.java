@@ -10,7 +10,7 @@
  */
 package org.monte.media.concurrent;
 
-import java.util.*;
+import java.util.Vector;
 /**
  * An EventLoop can process events on a separate worker thread.
  * It consists of two parts: the event collector and the event

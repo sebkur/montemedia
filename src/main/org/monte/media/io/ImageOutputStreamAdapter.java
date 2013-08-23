@@ -10,9 +10,9 @@
  */
 package org.monte.media.io;
 
-import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
 import javax.imageio.stream.ImageOutputStream;
 
 /**

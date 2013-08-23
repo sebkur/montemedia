@@ -10,8 +10,10 @@
  */
 package org.monte.media.iff;
 
-import java.io.*;
-import java.util.Arrays;
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 
 /**
  * MC68000OutputStream.

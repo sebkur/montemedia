@@ -10,18 +10,26 @@
  */
 package org.monte.media.converter;
 
-import org.monte.media.BezierInterpolator;
-import org.monte.media.SplineInterpolator;
-import java.awt.Image;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.lang.Math.sqrt;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+
 import java.awt.image.BufferedImage;
+
 import org.monte.media.AbstractVideoCodec;
+import org.monte.media.BezierInterpolator;
 import org.monte.media.Buffer;
 import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.SplineInterpolator;
 import org.monte.media.image.ColorModels;
 import org.monte.media.image.Images;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
-import static java.lang.Math.*;
 
 /**
  * Adjusts the colors of a buffered image.

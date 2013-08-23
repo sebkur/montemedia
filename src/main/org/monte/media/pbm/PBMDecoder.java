@@ -10,19 +10,25 @@
  */
 package org.monte.media.pbm;
 
+import java.awt.image.ColorModel;
+import java.awt.image.IndexColorModel;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Hashtable;
+
 import org.monte.media.AbortException;
 import org.monte.media.ParseException;
-import org.monte.media.iff.*;
+import org.monte.media.iff.IFFChunk;
+import org.monte.media.iff.IFFParser;
+import org.monte.media.iff.IFFVisitor;
+import org.monte.media.iff.MC68000InputStream;
 import org.monte.media.ilbm.CRNGColorCycle;
 import org.monte.media.ilbm.ColorCycle;
-import org.monte.media.ilbm.DRNGColorCycle;
 import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
-
-
-import java.io.*;
-import java.util.*;
-import java.awt.image.*;
-import java.net.URL;
+import org.monte.media.ilbm.DRNGColorCycle;
 
 /**
  * Creates Image objects by reading an IFF PBM stream.

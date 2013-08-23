@@ -20,8 +20,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.zip.InflaterInputStream;
+
 import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.ImageInputStream;
+
 import org.monte.media.io.ImageInputStreamAdapter;
 
 /**

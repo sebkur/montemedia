@@ -10,9 +10,9 @@
  */
 package org.monte.media.anim;
 
-import org.monte.media.image.BitmapImage;
-import org.monte.media.iff.IFFParser;
 import org.monte.media.ParseException;
+import org.monte.media.iff.IFFParser;
+import org.monte.media.image.BitmapImage;
 
 /**
  * @author  Werner Randelshofer, Hausmatt 10, CH-6405 Goldau, Switzerland

@@ -10,20 +10,41 @@
  */
 package org.monte.media.gui;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ResourceBundle;
+
+import javax.swing.BoundedRangeModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+import javax.swing.Timer;
+import javax.swing.border.Border;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.plaf.ButtonUI;
+
 import org.monte.media.ColorCyclePlayer;
-import org.monte.media.Player;
 import org.monte.media.MovieControl;
-import org.monte.media.gui.border.*;
+import org.monte.media.Player;
+import org.monte.media.gui.border.BackdropBorder;
+import org.monte.media.gui.border.ButtonStateBorder;
+import org.monte.media.gui.border.ImageBevelBorder;
 import org.monte.media.gui.plaf.CustomButtonUI;
 import org.monte.media.image.Images;
-import java.awt.*;
-import java.beans.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.util.ResourceBundle;
-import javax.swing.border.Border;
-import javax.swing.event.*;
-import javax.swing.plaf.ButtonUI;
 
 /**
  * The MovieControlAqua contains an audio on/off button, a start/stop button,

@@ -10,8 +10,6 @@
  */
 package org.monte.media;
 
-import org.monte.media.StateEvent;
-import org.monte.media.StateListener;
 
 /**
  * Tracks state changes in a StateModel.

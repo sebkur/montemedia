@@ -10,13 +10,14 @@
  */
 package org.monte.media.ilbm;
 
-import org.monte.media.image.BitmapImage;
-import org.monte.media.iff.IFFOutputStream;
-import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
 import java.io.File;
 import java.io.IOException;
+
 import javax.imageio.stream.FileImageOutputStream;
+
+import org.monte.media.iff.IFFOutputStream;
+import org.monte.media.image.BitmapImage;
 
 /**
  * {@code ILBMEncoder}.

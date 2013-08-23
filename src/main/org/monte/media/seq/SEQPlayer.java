@@ -10,28 +10,35 @@
  */
 package org.monte.media.seq;
 
-import org.monte.media.MovieControl;
-import org.monte.media.ColorCyclePlayer;
-import org.monte.media.AbstractPlayer;
-import org.monte.media.gui.JMovieControlAqua;
-import org.monte.media.gui.ImagePanel;
-import org.monte.media.image.BitmapImage;
-import org.monte.media.*;
-import org.monte.media.io.BoundedRangeInputStream;
-import org.monte.media.ilbm.ColorCycle;
-import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
+import static java.lang.Math.max;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
-import java.beans.*;
-import java.io.*;
-import java.util.*;
-import static java.lang.Math.*;
+import java.awt.Component;
+import java.awt.event.InputEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.image.ColorModel;
+import java.awt.image.DirectColorModel;
+import java.awt.image.ImageProducer;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Hashtable;
 
 import javax.swing.BoundedRangeModel;
 import javax.swing.DefaultBoundedRangeModel;
-import javax.swing.event.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import org.monte.media.AbstractPlayer;
+import org.monte.media.ColorCyclePlayer;
+import org.monte.media.MovieControl;
+import org.monte.media.gui.ImagePanel;
+import org.monte.media.gui.JMovieControlAqua;
+import org.monte.media.ilbm.ColorCycle;
+import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
+import org.monte.media.image.BitmapImage;
+import org.monte.media.io.BoundedRangeInputStream;
 
 
 /**

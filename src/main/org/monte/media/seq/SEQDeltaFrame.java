@@ -10,8 +10,9 @@
  */
 package org.monte.media.seq;
 
-import org.monte.media.image.BitmapImage;
 import java.util.Arrays;
+
+import org.monte.media.image.BitmapImage;
 
 /**
  * Represents a delta frame in a movie track.

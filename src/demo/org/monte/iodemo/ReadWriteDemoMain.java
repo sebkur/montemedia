@@ -10,23 +10,38 @@
  */
 package org.monte.iodemo;
 
-import java.util.ArrayList;
-import org.monte.media.MovieReader;
-import org.monte.media.MovieWriter;
-import java.util.HashSet;
-import org.monte.media.Codec;
-import org.monte.media.Buffer;
-import org.monte.media.math.Rational;
-import org.monte.media.Format;
-import java.awt.*;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_MJPG;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.IndexColorModel;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
+
+import org.monte.media.Buffer;
 import org.monte.media.BufferFlag;
+import org.monte.media.Codec;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.MovieReader;
+import org.monte.media.MovieWriter;
 import org.monte.media.Registry;
 import org.monte.media.image.Images;
-import static org.monte.media.VideoFormatKeys.*;
+import org.monte.media.math.Rational;
 
 /**
  * Demonstrates the use of {@link MovieReader} and {@link MovieWriter}.

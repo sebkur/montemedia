@@ -10,13 +10,15 @@
  */
 package org.monte.media.jmf.codec.video;
 
-import org.monte.media.avi.ZMBVCodecCore;
 import java.awt.Dimension;
+
 import javax.media.Buffer;
 import javax.media.Format;
 import javax.media.ResourceUnavailableException;
 import javax.media.format.RGBFormat;
 import javax.media.format.VideoFormat;
+
+import org.monte.media.avi.ZMBVCodecCore;
 
 /**
  * {@code ZMBVDecoder}.

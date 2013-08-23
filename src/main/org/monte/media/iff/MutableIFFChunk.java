@@ -10,9 +10,15 @@
  */
 package org.monte.media.iff;
 
-import java.io.*;
-import java.util.*;
-import javax.swing.tree.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Vector;
+
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * MutableIFFChunk.

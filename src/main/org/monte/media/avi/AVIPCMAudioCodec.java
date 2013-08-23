@@ -10,12 +10,25 @@
  */
 package org.monte.media.avi;
 
-import org.monte.media.audio.*;
-import org.monte.media.Format;
+import static org.monte.media.AudioFormatKeys.ByteOrderKey;
+import static org.monte.media.AudioFormatKeys.ENCODING_AVI_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_SIGNED;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_UNSIGNED;
+import static org.monte.media.AudioFormatKeys.SampleSizeInBitsKey;
+import static org.monte.media.AudioFormatKeys.SignedKey;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+
 import java.nio.ByteOrder;
 import java.util.Arrays;
 import java.util.HashSet;
-import static org.monte.media.AudioFormatKeys.*;
+
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.audio.PCMAudioCodec;
 
 /**
  * {@code PCMAudioCodec} performs sign conversion, endian conversion and

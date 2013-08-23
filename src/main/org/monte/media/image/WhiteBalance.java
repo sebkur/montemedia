@@ -10,12 +10,16 @@
  */
 package org.monte.media.image;
 
-import java.util.Arrays;
-import org.monte.media.math.LinearEquations;
+import static java.lang.Math.abs;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
+
 import javax.media.jai.Histogram;
-import static java.lang.Math.*;
+
+import org.monte.media.math.LinearEquations;
 
 /**
  * {@code WhiteBalance}.

@@ -11,12 +11,13 @@
 
 package org.monte.media.anim;
 
-import java.util.EnumSet;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+
 import org.monte.media.Buffer;
 import org.monte.media.Track;
 import org.monte.media.image.BitmapImage;
 import org.monte.media.math.Rational;
-import static org.monte.media.BufferFlag.*;
 
 /**
  * {@code ANIMTrack}.

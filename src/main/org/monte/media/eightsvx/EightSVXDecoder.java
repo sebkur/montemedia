@@ -10,14 +10,18 @@
  */
 package org.monte.media.eightsvx;
 
-import org.monte.media.AbortException;
-import org.monte.media.ParseException;
-import org.monte.media.iff.*;
-import java.util.Vector;
-import java.io.InputStream;
+import java.applet.AudioClip;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.applet.AudioClip;
+import java.io.InputStream;
+import java.util.Vector;
+
+import org.monte.media.AbortException;
+import org.monte.media.ParseException;
+import org.monte.media.iff.IFFChunk;
+import org.monte.media.iff.IFFParser;
+import org.monte.media.iff.IFFVisitor;
+import org.monte.media.iff.MC68000InputStream;
 
 /**
  * Creates a collection of EightSVXAudioClip objects by

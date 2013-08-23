@@ -11,11 +11,12 @@
 
 package org.monte.media.mpo;
 
-import org.monte.media.jpeg.JFIFInputStream;
-import org.monte.media.jpeg.JFIFOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import org.monte.media.jpeg.JFIFInputStream;
+import org.monte.media.jpeg.JFIFOutputStream;
 
 /**
  * Utility methods for {@code MPOFiles}.

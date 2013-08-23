@@ -10,14 +10,14 @@
  */
 package org.monte.media.anim;
 
-import org.monte.media.seq.SEQMovieTrack;
-import org.monte.media.seq.*;
-import org.monte.media.image.BitmapImage;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import org.monte.media.image.BitmapImage;
+import org.monte.media.seq.SEQMovieTrack;
 
 /**
  * {@code SEQReader}.

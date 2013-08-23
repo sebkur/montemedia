@@ -11,14 +11,16 @@
 
 package org.monte.media.imgseq;
 
-import org.monte.media.Buffer;
-import org.monte.media.Track;
-import org.monte.media.math.Rational;
+import static org.monte.media.BufferFlag.DISCARD;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Arrays;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.Buffer;
+import org.monte.media.Track;
+import org.monte.media.math.Rational;
 
 /**
  * {@code ImageSequenceTrack}.

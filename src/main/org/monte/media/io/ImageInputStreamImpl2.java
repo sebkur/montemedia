@@ -12,6 +12,7 @@ package org.monte.media.io;
 
 import java.io.IOException;
 import java.nio.ByteOrder;
+
 import javax.imageio.stream.ImageInputStreamImpl;
 
 /**

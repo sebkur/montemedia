@@ -13,8 +13,7 @@
 
 package org.monte.media;
 
-import java.util.*;
-import javax.swing.event.*;
+import javax.swing.event.ChangeListener;
 /**
  * Animator executes multiple Interpolator's on a worker thread.
  *

@@ -16,11 +16,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
 import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.ImageInputStream;
 import javax.swing.ImageIcon;
 import javax.swing.SwingWorker;
 import javax.swing.TransferHandler;
+
 import org.monte.media.jpeg.CMYKJPEGImageReader;
 import org.monte.media.jpeg.CMYKJPEGImageReaderSpi;
 

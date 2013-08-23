@@ -10,27 +10,6 @@
  */
 package org.monte.media.exif;
 
-import org.monte.media.io.ImageInputStreamAdapter;
-import org.monte.media.io.ByteArrayImageInputStream;
-import org.monte.media.jpeg.JFIFInputStream;
-import org.monte.media.jpeg.JFIFInputStream.Segment;
-import org.monte.media.riff.RIFFChunk;
-import org.monte.media.riff.RIFFParser;
-import org.monte.media.riff.RIFFVisitor;
-import org.monte.media.tiff.FileSegment;
-import org.monte.media.tiff.BaselineTagSet;
-import org.monte.media.tiff.IFDDataType;
-import org.monte.media.tiff.IFD;
-import org.monte.media.tiff.IFDEntry;
-import org.monte.media.math.Rational;
-import org.monte.media.tiff.TIFFDirectory;
-import org.monte.media.tiff.TIFFField;
-import org.monte.media.tiff.TIFFInputStream;
-import org.monte.media.tiff.TIFFNode;
-import org.monte.media.tiff.TIFFTag;
-import org.monte.media.tiff.TagSet;
-import org.monte.media.AbortException;
-import org.monte.media.ParseException;
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
@@ -42,11 +21,34 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.TreeSet;
+
 import javax.imageio.ImageIO;
 import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.metadata.IIOMetadataNode;
 import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.ImageInputStream;
+
+import org.monte.media.AbortException;
+import org.monte.media.ParseException;
+import org.monte.media.io.ByteArrayImageInputStream;
+import org.monte.media.io.ImageInputStreamAdapter;
+import org.monte.media.jpeg.JFIFInputStream;
+import org.monte.media.jpeg.JFIFInputStream.Segment;
+import org.monte.media.math.Rational;
+import org.monte.media.riff.RIFFChunk;
+import org.monte.media.riff.RIFFParser;
+import org.monte.media.riff.RIFFVisitor;
+import org.monte.media.tiff.BaselineTagSet;
+import org.monte.media.tiff.FileSegment;
+import org.monte.media.tiff.IFD;
+import org.monte.media.tiff.IFDDataType;
+import org.monte.media.tiff.IFDEntry;
+import org.monte.media.tiff.TIFFDirectory;
+import org.monte.media.tiff.TIFFField;
+import org.monte.media.tiff.TIFFInputStream;
+import org.monte.media.tiff.TIFFNode;
+import org.monte.media.tiff.TIFFTag;
+import org.monte.media.tiff.TagSet;
 
 /**
  * Reads EXIF and MP meta data from a JPEG, MPO or AVI file. <p> Creates a tree

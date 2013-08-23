@@ -16,6 +16,7 @@ import java.io.OutputStream;
 import java.nio.ByteOrder;
 import java.util.HashSet;
 import java.util.Stack;
+
 import javax.imageio.stream.FileImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
 

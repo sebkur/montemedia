@@ -10,21 +10,22 @@
  */
 package org.monte.media.pbm;
 
-import org.monte.media.gui.ImagePanel;
-import org.monte.media.io.BoundedRangeInputStream;
-import org.monte.media.AbstractPlayer;
-import org.monte.media.gui.JMovieControlAqua;
-import org.monte.media.MovieControl;
-import org.monte.media.ColorCyclePlayer;
-import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
 import java.awt.Component;
-import java.awt.image.ColorModel;
 import java.awt.image.ImageProducer;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+
 import javax.swing.BoundedRangeModel;
 import javax.swing.DefaultBoundedRangeModel;
+
+import org.monte.media.AbstractPlayer;
+import org.monte.media.ColorCyclePlayer;
+import org.monte.media.MovieControl;
+import org.monte.media.gui.ImagePanel;
+import org.monte.media.gui.JMovieControlAqua;
+import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
+import org.monte.media.io.BoundedRangeInputStream;
 
 /**
  * A Player for PBM images with color cycling.

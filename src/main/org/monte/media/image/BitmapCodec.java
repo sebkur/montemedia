@@ -10,13 +10,16 @@
  */
 package org.monte.media.image;
 
-import org.monte.media.AbstractVideoCodec;
-import org.monte.media.Buffer;
-import org.monte.media.Codec;
-import org.monte.media.Format;
-import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
-import org.monte.media.ilbm.ILBMDecoder;
-import org.monte.media.pbm.PBMDecoder;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BITMAP_IMAGE;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -24,9 +27,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+
 import javax.imageio.ImageIO;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.AbstractVideoCodec;
+import org.monte.media.Buffer;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
+import org.monte.media.ilbm.ILBMDecoder;
+import org.monte.media.pbm.PBMDecoder;
 
 /**
  * Decodes media data into a {@code Bitmap}.

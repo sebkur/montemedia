@@ -10,14 +10,16 @@
  */
 package org.monte.media.anim;
 
+import static java.lang.Math.max;
+import static org.monte.media.BufferFlag.DISCARD;
+
+import java.io.File;
+import java.io.IOException;
+
 import org.monte.media.Buffer;
 import org.monte.media.Multiplexer;
 import org.monte.media.image.BitmapImage;
 import org.monte.media.math.Rational;
-import java.io.File;
-import java.io.IOException;
-import static java.lang.Math.*;
-import static org.monte.media.BufferFlag.*;
 
 /**
  * {@code ANIMMultiplexer}.

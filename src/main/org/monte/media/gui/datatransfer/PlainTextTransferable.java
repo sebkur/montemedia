@@ -11,8 +11,13 @@
 
 package org.monte.media.gui.datatransfer;
 
-import java.awt.datatransfer.*;
-import java.io.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.StringReader;
 /**
  * PlainTextTransferable.
  * <p>

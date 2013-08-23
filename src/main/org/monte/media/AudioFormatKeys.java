@@ -10,10 +10,12 @@
  */
 package org.monte.media;
 
-import org.monte.media.math.Rational;
 import java.nio.ByteOrder;
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioFormat.Encoding;
+
+import org.monte.media.math.Rational;
 
 /**
  * Defines common format keys for audio media.

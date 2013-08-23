@@ -10,15 +10,25 @@
  */
 package org.monte.media.converter;
 
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.IndexColorModel;
+
 import org.monte.media.AbstractVideoCodec;
 import org.monte.media.Buffer;
 import org.monte.media.Format;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+import org.monte.media.FormatKeys.MediaType;
 
 /**
  * Scales a buffered image.

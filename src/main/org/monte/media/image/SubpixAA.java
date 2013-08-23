@@ -10,13 +10,14 @@
  */
 package org.monte.media.image;
 
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.awt.image.ImageObserver;
 import java.awt.image.WritableRaster;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Scales an image down and applies Subpixel antialiasing to it.

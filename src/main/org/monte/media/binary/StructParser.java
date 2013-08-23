@@ -10,15 +10,27 @@
  */
 package org.monte.media.binary;
 
-import org.monte.media.math.ExtendedReal;
-import org.monte.media.io.ByteArrayImageInputStream;
-import java.io.*;
-import org.monte.media.ParseException;
-import org.monte.media.io.StreamPosTokenizer;
-import java.util.*;
-import java.text.*;
+import java.io.ByteArrayOutputStream;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.GregorianCalendar;
+import java.util.Hashtable;
+import java.util.Vector;
+
 import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.MemoryCacheImageInputStream;
+
+import org.monte.media.ParseException;
+import org.monte.media.io.ByteArrayImageInputStream;
+import org.monte.media.io.StreamPosTokenizer;
+import org.monte.media.math.ExtendedReal;
 
 /**
  * Parses structured binary data using C-like data declarations.

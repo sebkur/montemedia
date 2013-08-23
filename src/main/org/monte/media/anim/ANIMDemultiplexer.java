@@ -10,10 +10,11 @@
  */
 package org.monte.media.anim;
 
-import org.monte.media.Demultiplexer;
-import org.monte.media.Track;
 import java.io.File;
 import java.io.IOException;
+
+import org.monte.media.Demultiplexer;
+import org.monte.media.Track;
 
 /**
  * {@code ANIMDemultiplexer}.

@@ -11,7 +11,8 @@
 
 package org.monte.media.util;
 
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Methods contains convenience methods for method invocations using

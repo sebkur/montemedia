@@ -11,7 +11,8 @@
 package org.monte.media.seq;
 
 import java.awt.image.ColorModel;
-import java.util.*;
+import java.util.Vector;
+
 import org.monte.media.image.BitmapImage;
 
 /**

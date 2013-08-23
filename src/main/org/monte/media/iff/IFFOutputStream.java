@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Stack;
+
 import javax.imageio.stream.ImageOutputStream;
 
 /**

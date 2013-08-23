@@ -10,12 +10,14 @@
  */
 package org.monte.media.seq;
 
-import org.monte.media.image.BitmapImage;
 import java.awt.image.IndexColorModel;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+
 import javax.imageio.stream.FileImageInputStream;
+
+import org.monte.media.image.BitmapImage;
 
 /**
  * {@code SEQReader}.

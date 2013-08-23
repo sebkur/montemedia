@@ -12,6 +12,7 @@ package org.monte.media.mpo;
 
 import java.io.IOException;
 import java.util.Locale;
+
 import javax.imageio.ImageReader;
 import javax.imageio.spi.ImageReaderSpi;
 import javax.imageio.stream.ImageInputStream;

@@ -11,9 +11,11 @@
 
 package org.monte.media.gui.border;
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.*;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Insets;
+
+import javax.swing.border.Border;
 /**
  * BackdropBorder has a foreground border and a background border.
  * The foreground border is drawn, when paintBorder() is invoked.

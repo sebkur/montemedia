@@ -14,17 +14,17 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
+
 import org.monte.media.AudioFormatKeys;
 import org.monte.media.Buffer;
-import org.monte.media.math.Rational;
 import org.monte.media.avi.AVIWriter;
+import org.monte.media.math.Rational;
 
 /**
  * {@code AudioRecorder} records audio into an AVI file.

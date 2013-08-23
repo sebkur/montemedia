@@ -10,8 +10,9 @@
  */
 package org.monte.media;
 
-import org.monte.media.math.Rational;
 import java.io.IOException;
+
+import org.monte.media.math.Rational;
 
 /**
  * A simple API for reading movie data (audio and video) from a file.

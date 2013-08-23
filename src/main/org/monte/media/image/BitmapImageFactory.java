@@ -11,14 +11,30 @@
 
 package org.monte.media.image;
 
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorModel;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
+import java.awt.image.DataBufferInt;
+import java.awt.image.IndexColorModel;
+import java.awt.image.MemoryImageSource;
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Hashtable;
+
 import org.monte.media.iff.MC68000OutputStream;
 import org.monte.media.iff.MutableIFFChunk;
 import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
 import org.monte.media.ilbm.HAMColorModel;
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
-import java.util.Hashtable;
 
 /**
  * Creates a BufferedImage from a BitmapImage.

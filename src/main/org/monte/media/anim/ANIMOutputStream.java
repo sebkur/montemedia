@@ -10,18 +10,18 @@
  */
 package org.monte.media.anim;
 
-import java.util.Map;
-import java.util.HashMap;
-import org.monte.media.image.BitmapImage;
-import org.monte.media.io.SeekableByteArrayOutputStream;
-import org.monte.media.iff.IFFOutputStream;
+import static java.lang.Math.max;
+
 import java.awt.image.IndexColorModel;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
+
 import javax.imageio.stream.FileImageOutputStream;
-import static java.lang.Math.*;
+
+import org.monte.media.iff.IFFOutputStream;
+import org.monte.media.image.BitmapImage;
+import org.monte.media.io.SeekableByteArrayOutputStream;
 /**
  * {@code ANIMOutputStream}.
  * <p>

@@ -11,14 +11,18 @@
 package org.monte.media.avi;
 
 //import com.jcraft.jzlib.InflaterInputStream;
-import java.util.zip.InflaterInputStream;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import java.io.IOException;
+import java.nio.ByteOrder;
+import java.util.zip.InflaterInputStream;
+
+import javax.imageio.stream.ImageInputStream;
+
 import org.monte.media.io.AppendableByteArrayInputStream;
 import org.monte.media.io.ByteArrayImageInputStream;
 import org.monte.media.io.UncachedImageInputStream;
-import java.nio.ByteOrder;
-import javax.imageio.stream.ImageInputStream;
-import static java.lang.Math.*;
 
 /**
  * Implements the DosBox Capture Codec {@code "ZMBV"}.

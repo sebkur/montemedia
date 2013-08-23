@@ -13,6 +13,7 @@ package org.monte.media.io;
 
 import java.io.FilterInputStream;
 import java.io.IOException;
+
 import javax.imageio.stream.ImageInputStream;
 
 /**

@@ -10,7 +10,10 @@
  */
 package org.monte.media.iff;
 
-import java.io.*;
+import java.io.EOFException;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * A MC 68000 input stream lets an application read primitive data
@@ -224,7 +227,7 @@ extends FilterInputStream {
      *
      * @param in
      * @param out
-     * @throws ParseException
+     * @throws IOException
      */
     public static int unpackByteRun1(byte[] in, byte[] out)
             throws IOException {

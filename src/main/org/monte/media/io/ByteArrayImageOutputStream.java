@@ -12,14 +12,15 @@
  */
 package org.monte.media.io;
 
-import java.io.OutputStream;
-import javax.imageio.stream.ImageOutputStreamImpl;
-import java.io.ByteArrayOutputStream;
-import javax.imageio.stream.ImageOutputStream;
+import static java.lang.Math.max;
+
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.OutputStream;
 import java.nio.ByteOrder;
-import static java.lang.Math.*;
+import java.util.Arrays;
+
+import javax.imageio.stream.ImageOutputStream;
+import javax.imageio.stream.ImageOutputStreamImpl;
 
 /**
  * This class implements an image output stream in which the data is

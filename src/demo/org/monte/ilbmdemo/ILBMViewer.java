@@ -26,11 +26,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+
 import org.monte.media.gui.Worker;
 import org.monte.media.ilbm.ColorCyclingMemoryImageSource;
 import org.monte.media.ilbm.ILBMDecoder;

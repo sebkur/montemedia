@@ -10,21 +10,39 @@
  */
 package org.monte.media.quicktime;
 
-import java.io.EOFException;
-import javax.imageio.stream.ImageInputStream;
-import org.monte.media.AbstractVideoCodec;
-import org.monte.media.Buffer;
-import org.monte.media.Format;
-import org.monte.media.io.ByteArrayImageOutputStream;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_ANIMATION;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
+import java.io.EOFException;
 import java.io.IOException;
 import java.nio.ByteOrder;
+
+import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.ImageOutputStream;
-import static java.lang.Math.*;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.AbstractVideoCodec;
+import org.monte.media.Buffer;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.io.ByteArrayImageOutputStream;
 
 /**
  * Implements the Apple Animation codec.

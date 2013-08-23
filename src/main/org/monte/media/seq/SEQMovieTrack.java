@@ -10,14 +10,21 @@
  */
 package org.monte.media.seq;
 
-import org.monte.media.ilbm.ColorCycle;
+import static java.lang.Math.max;
+
+import java.applet.AudioClip;
 import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
-import java.applet.AudioClip;
-import java.beans.PropertyChangeSupport;
 import java.beans.PropertyChangeListener;
-import java.util.*;
-import static java.lang.Math.*;
+import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Vector;
+
+import org.monte.media.ilbm.ColorCycle;
 
 /**
  * A movie track gives access to the static resources of

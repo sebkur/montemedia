@@ -10,21 +10,44 @@
  */
 package org.monte.media.avi;
 
-import java.awt.image.ColorModel;
-import org.monte.media.riff.RIFFChunk;
-import org.monte.media.math.Rational;
-import java.util.ArrayList;
-import org.monte.media.Format;
-import org.monte.media.riff.RIFFParser;
+import static java.lang.Math.max;
+import static org.monte.media.AudioFormatKeys.ByteOrderKey;
+import static org.monte.media.AudioFormatKeys.ChannelsKey;
+import static org.monte.media.AudioFormatKeys.FrameSizeKey;
+import static org.monte.media.AudioFormatKeys.SampleRateKey;
+import static org.monte.media.AudioFormatKeys.SampleSizeInBitsKey;
+import static org.monte.media.AudioFormatKeys.SignedKey;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_DIB;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_RLE;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.Dimension;
+import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteOrder;
-import javax.imageio.stream.*;
-import static java.lang.Math.*;
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
+import java.util.ArrayList;
+
+import javax.imageio.stream.FileImageOutputStream;
+import javax.imageio.stream.ImageOutputStream;
+
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.math.Rational;
+import org.monte.media.riff.RIFFChunk;
+import org.monte.media.riff.RIFFParser;
 
 /**
  * Provides low-level support for writing already encoded audio and video

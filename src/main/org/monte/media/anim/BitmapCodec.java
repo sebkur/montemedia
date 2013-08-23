@@ -10,13 +10,27 @@
  */
 package org.monte.media.anim;
 
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_ANIM;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+import static org.monte.media.anim.AmigaVideoFormatKeys.ENCODING_ANIM_OP5;
+
+import java.awt.image.BufferedImage;
+
 import org.monte.media.AbstractVideoCodec;
 import org.monte.media.Buffer;
 import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
 import org.monte.media.image.BitmapImage;
-import java.awt.image.BufferedImage;
-import static org.monte.media.anim.AmigaVideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
 
 /**
  * Converts BufferedImage to BitmapImage. 

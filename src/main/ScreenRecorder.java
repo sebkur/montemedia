@@ -1,6 +1,5 @@
 
 import org.monte.screenrecorder.ScreenRecorderCompactMain;
-import org.monte.screenrecorder.ScreenRecorderMain;
 
 /*
  * @(#)ScreenRecorder.java  1.0  2011-03-19

@@ -10,8 +10,9 @@
  */
 package org.monte.media;
 
-import org.monte.media.math.Rational;
 import java.beans.PropertyChangeListener;
+
+import org.monte.media.math.Rational;
 
 /**
  * A {@code movie} provides an editable container for media data in a time and

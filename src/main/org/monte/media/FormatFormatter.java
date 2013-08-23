@@ -4,11 +4,25 @@
  */
 package org.monte.media;
 
+import static org.monte.media.AudioFormatKeys.ByteOrderKey;
+import static org.monte.media.AudioFormatKeys.ChannelsKey;
+import static org.monte.media.AudioFormatKeys.ENCODING_AVI_PCM;
+import static org.monte.media.AudioFormatKeys.SampleRateKey;
+import static org.monte.media.AudioFormatKeys.SampleSizeInBitsKey;
+import static org.monte.media.AudioFormatKeys.SignedKey;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.PixelAspectRatioKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.nio.ByteOrder;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.FormatKeys.*;
+
 import org.monte.media.FormatKeys.MediaType;
-import static org.monte.media.VideoFormatKeys.*;
 import org.monte.media.math.Rational;
 
 /**

@@ -10,15 +10,23 @@
  */
 package org.monte.media.anim;
 
-import org.monte.media.Format;
-import org.monte.media.MovieWriter;
-import org.monte.media.math.Rational;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_ANIM;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.anim.AmigaVideoFormatKeys.ENCODING_ANIM_OP5;
+import static org.monte.media.anim.AmigaVideoFormatKeys.toCAMG;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.anim.AmigaVideoFormatKeys.*;
+
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.MovieWriter;
+import org.monte.media.math.Rational;
 
 /**
  * {@code ANIMWriter}.

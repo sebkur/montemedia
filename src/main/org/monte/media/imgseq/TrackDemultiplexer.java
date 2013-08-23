@@ -10,9 +10,10 @@
  */
 package org.monte.media.imgseq;
 
+import java.io.IOException;
+
 import org.monte.media.Demultiplexer;
 import org.monte.media.Track;
-import java.io.IOException;
 
 /**
  * Can "demultiplex" an array of already demultiplexed tracks.

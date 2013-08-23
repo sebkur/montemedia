@@ -10,21 +10,27 @@
  */
 package org.monte.media.converter;
 
-import org.monte.media.AbstractVideoCodec;
-import org.monte.media.Buffer;
-import org.monte.media.Format;
-import org.monte.media.math.Rational;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.END_OF_MEDIA;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.ArrayList;
 import java.util.Arrays;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.AbstractVideoCodec;
+import org.monte.media.Buffer;
+import org.monte.media.Format;
+import org.monte.media.math.Rational;
 
 /**
  * This codec converts frames from a fixed frame rate into a variable frame rate

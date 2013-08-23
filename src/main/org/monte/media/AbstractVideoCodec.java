@@ -10,6 +10,9 @@
  */
 package org.monte.media;
 
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
@@ -20,8 +23,8 @@ import java.awt.image.DataBufferUShort;
 import java.awt.image.DirectColorModel;
 import java.awt.image.WritableRaster;
 import java.io.IOException;
+
 import javax.imageio.stream.ImageOutputStream;
-import static org.monte.media.VideoFormatKeys.*;
 
 /**
  * {@code AbstractVideoCodec}.

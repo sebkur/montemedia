@@ -10,21 +10,41 @@
  */
 package org.monte.media.jpeg;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import javax.imageio.metadata.IIOMetadata;
-import org.monte.media.io.ByteArrayImageInputStream;
-import org.monte.media.io.ImageInputStreamAdapter;
-import com.sun.imageio.plugins.jpeg.JPEGImageReader;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import java.awt.color.ColorSpace;
 import java.awt.color.ICC_ColorSpace;
 import java.awt.color.ICC_Profile;
-import java.awt.image.*;
-import java.io.*;
-import javax.imageio.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorConvertOp;
+import java.awt.image.ColorModel;
+import java.awt.image.DataBufferInt;
+import java.awt.image.DirectColorModel;
+import java.awt.image.PixelInterleavedSampleModel;
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReadParam;
+import javax.imageio.ImageReader;
+import javax.imageio.ImageTypeSpecifier;
+import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.spi.ImageReaderSpi;
-import javax.imageio.stream.*;
-import static java.lang.Math.*;
+import javax.imageio.stream.ImageInputStream;
+import javax.imageio.stream.MemoryCacheImageInputStream;
+
+import org.monte.media.io.ByteArrayImageInputStream;
+import org.monte.media.io.ImageInputStreamAdapter;
+
+import com.sun.imageio.plugins.jpeg.JPEGImageReader;
 
 /**
  * Reads a JPEG image with colors in the CMYK color space.

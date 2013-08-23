@@ -11,6 +11,7 @@
 package org.monte.media;
 
 import java.io.IOException;
+
 import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.ImageOutputStream;
 

@@ -10,10 +10,18 @@
  */
 package org.monte.media.gui;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.beans.PropertyChangeSupport;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
+import java.awt.TexturePaint;
+import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 
 import javax.swing.JComponent;
 

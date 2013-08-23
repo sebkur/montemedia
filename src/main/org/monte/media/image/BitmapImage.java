@@ -10,15 +10,14 @@
  */
 package org.monte.media.image;
 
-import org.monte.media.ilbm.HAMColorModel;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBufferByte;
-import java.awt.image.IndexColorModel;
 import java.awt.image.DirectColorModel;
+import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
-import java.util.zip.Adler32;
-import javax.swing.JFrame;
+
+import org.monte.media.ilbm.HAMColorModel;
 
 /**
  * A BitmapImage is comprised of a ColorModel and an accessible byte array of

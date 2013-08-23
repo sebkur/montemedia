@@ -10,7 +10,9 @@
  */
 package org.monte.media.iff;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
 /**
  * IFF Chunks form the building blocks of an IFF file.
  * This class is made for reading purposes only. See MutableIFFChunk

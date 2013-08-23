@@ -10,9 +10,12 @@
  */
 package org.monte.media;
 
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+
 import java.io.File;
 import java.util.ArrayList;
-import static org.monte.media.FormatKeys.*;
 
 /**
  * The {@code Registry} for audio and video codecs.

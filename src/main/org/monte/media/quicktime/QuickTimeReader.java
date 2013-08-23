@@ -10,20 +10,30 @@
  */
 package org.monte.media.quicktime;
 
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.END_OF_MEDIA;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+
 import javax.imageio.stream.ImageInputStream;
+
 import org.monte.media.Buffer;
-import org.monte.media.Format;
-import org.monte.media.MovieReader;
-import org.monte.media.math.Rational;
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
 import org.monte.media.Codec;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.MovieReader;
 import org.monte.media.Registry;
-import static org.monte.media.BufferFlag.*;
+import org.monte.media.math.Rational;
 
 /**
  * {@code QuickTimeReader}.

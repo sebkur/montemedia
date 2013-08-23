@@ -10,12 +10,14 @@
  */
 package org.monte.media.ilbm;
 
-import org.monte.media.iff.IFFParser;
 import java.io.IOException;
 import java.util.Locale;
+
 import javax.imageio.ImageReader;
 import javax.imageio.spi.ImageReaderSpi;
 import javax.imageio.stream.ImageInputStream;
+
+import org.monte.media.iff.IFFParser;
 
 /**
  * ImageIO service provider interface for images in the Amiga IFF Interleaved

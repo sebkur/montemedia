@@ -10,9 +10,12 @@
  */
 package org.monte.media.math;
 
-import static java.lang.Math.*;
+import static java.lang.Math.abs;
+import static java.lang.Math.signum;
+import static org.monte.media.math.IntMath.gcd;
+import static org.monte.media.math.IntMath.scm;
+
 import java.math.BigInteger;
-import static org.monte.media.math.IntMath.*;
 
 /**
  * Represents a TIFF RATIONAL number. <p> Two LONGs 32-bit (4-byte) unsigned

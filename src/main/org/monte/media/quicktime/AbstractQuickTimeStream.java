@@ -10,19 +10,20 @@
  */
 package org.monte.media.quicktime;
 
-import java.io.UnsupportedEncodingException;
-import org.monte.media.Buffer;
-import org.monte.media.Codec;
-import org.monte.media.Format;
-import org.monte.media.io.ImageOutputStreamAdapter;
-import org.monte.media.math.Rational;
 import java.awt.image.IndexColorModel;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
+
 import javax.imageio.stream.ImageOutputStream;
-import static org.monte.media.FormatKeys.*;
+
+import org.monte.media.Buffer;
+import org.monte.media.Codec;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.io.ImageOutputStreamAdapter;
+import org.monte.media.math.Rational;
 
 /**
  * This is the base class for low-level QuickTime stream IO.

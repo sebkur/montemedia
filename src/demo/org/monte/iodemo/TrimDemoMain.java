@@ -10,18 +10,20 @@
  */
 package org.monte.iodemo;
 
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.StreamTokenizer;
 import java.io.StringReader;
 import java.util.ArrayList;
+
 import org.monte.media.Buffer;
-import org.monte.media.BufferFlag;
 import org.monte.media.Codec;
 import org.monte.media.Format;
 import org.monte.media.FormatFormatter;
-import org.monte.media.FormatKeys;
-import static org.monte.media.FormatKeys.*;
+import org.monte.media.FormatKeys.MediaType;
 import org.monte.media.MovieReader;
 import org.monte.media.MovieWriter;
 import org.monte.media.Registry;

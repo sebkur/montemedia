@@ -10,20 +10,44 @@
  */
 package org.monte.media.quicktime;
 
+import static java.lang.Math.max;
+import static org.monte.media.AudioFormatKeys.ByteOrderKey;
+import static org.monte.media.AudioFormatKeys.ChannelsKey;
+import static org.monte.media.AudioFormatKeys.FrameSizeKey;
+import static org.monte.media.AudioFormatKeys.SampleRateKey;
+import static org.monte.media.AudioFormatKeys.SampleSizeInBitsKey;
+import static org.monte.media.AudioFormatKeys.SignedKey;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.CompressorNameKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.image.ColorModel;
-import java.util.Arrays;
-import org.monte.media.Format;
-import org.monte.media.io.ImageOutputStreamAdapter;
-import org.monte.media.math.Rational;
 import java.awt.image.IndexColorModel;
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.ByteOrder;
 import java.util.Date;
 import java.util.zip.DeflaterOutputStream;
-import javax.imageio.stream.*;
-import static java.lang.Math.*;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
+
+import javax.imageio.stream.FileImageOutputStream;
+import javax.imageio.stream.ImageOutputStream;
+import javax.imageio.stream.MemoryCacheImageOutputStream;
+
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.io.ImageOutputStreamAdapter;
+import org.monte.media.math.Rational;
 
 /**
  * This class provides low-level support for writing already encoded audio and

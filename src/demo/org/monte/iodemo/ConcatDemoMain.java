@@ -13,8 +13,8 @@ package org.monte.iodemo;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
 import org.monte.media.Buffer;
-import org.monte.media.BufferFlag;
 import org.monte.media.MovieReader;
 import org.monte.media.MovieWriter;
 import org.monte.media.Registry;

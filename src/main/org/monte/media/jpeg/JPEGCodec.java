@@ -10,20 +10,38 @@
  */
 package org.monte.media.jpeg;
 
-import org.monte.media.io.ByteArrayImageInputStream;
-import javax.imageio.ImageReader;
-import org.monte.media.Format;
-import org.monte.media.AbstractVideoCodec;
-import org.monte.media.Buffer;
-import org.monte.media.io.ByteArrayImageOutputStream;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.COMPRESSOR_NAME_QUICKTIME_JPEG;
+import static org.monte.media.VideoFormatKeys.CompressorNameKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_MJPG;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_JPEG;
+import static org.monte.media.VideoFormatKeys.QualityKey;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
 import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+
+import org.monte.media.AbstractVideoCodec;
+import org.monte.media.Buffer;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.io.ByteArrayImageInputStream;
+import org.monte.media.io.ByteArrayImageOutputStream;
 
 /**
  * {@code JPEGCodec} encodes a BufferedImage as a byte[] array.

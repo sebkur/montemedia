@@ -10,18 +10,20 @@
  */
 package org.monte.media.gui;
 
-import org.monte.media.Movie;
-import org.monte.media.gui.border.ImageBevelBorder;
-import org.monte.media.image.Images;
-import org.monte.media.math.Rational;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+
 import javax.imageio.ImageIO;
 import javax.swing.TransferHandler;
 import javax.swing.border.Border;
+
+import org.monte.media.Movie;
+import org.monte.media.gui.border.ImageBevelBorder;
+import org.monte.media.image.Images;
+import org.monte.media.math.Rational;
 
 /**
  * JMovieControlPanel.

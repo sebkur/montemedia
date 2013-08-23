@@ -10,7 +10,6 @@
  */
 package org.monte.media.mpo;
 
-import org.monte.media.gui.Worker;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
@@ -22,9 +21,12 @@ import java.awt.dnd.DropTargetListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+
+import org.monte.media.gui.Worker;
 
 /**
  * MPOImageSplitter.

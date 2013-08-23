@@ -10,13 +10,10 @@
  */
 package org.monte.moviemaker;
 
-import javax.swing.UIManager;
-import org.monte.media.math.Rational;
-import org.monte.media.Buffer;
-import org.monte.media.Format;
-import org.monte.media.gui.datatransfer.FileTextFieldTransferHandler;
-import org.monte.media.mp3.MP3AudioInputStream;
-import org.monte.media.quicktime.QuickTimeWriter;
+import static java.lang.Math.min;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
@@ -28,6 +25,7 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.prefs.Preferences;
+
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -39,12 +37,16 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.ProgressMonitor;
 import javax.swing.SwingWorker;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileSystemView;
-import static java.lang.Math.*;
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
+
+import org.monte.media.Buffer;
+import org.monte.media.Format;
+import org.monte.media.gui.datatransfer.FileTextFieldTransferHandler;
+import org.monte.media.math.Rational;
+import org.monte.media.mp3.MP3AudioInputStream;
+import org.monte.media.quicktime.QuickTimeWriter;
 
 /**
  * A demo for the {@link QuickTimeWriter} class.

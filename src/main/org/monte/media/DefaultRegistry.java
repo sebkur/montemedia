@@ -10,14 +10,44 @@
  */
 package org.monte.media;
 
+import static org.monte.media.AudioFormatKeys.ENCODING_AVI_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_SIGNED;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_UNSIGNED;
+import static org.monte.media.AudioFormatKeys.ENCODING_QUICKTIME_IN24_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_QUICKTIME_IN32_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_QUICKTIME_RAW_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_QUICKTIME_SOWT_PCM;
+import static org.monte.media.AudioFormatKeys.ENCODING_QUICKTIME_TWOS_PCM;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.MIME_ANIM;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.COMPRESSOR_NAME_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.CompressorNameKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_DIB;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_DOSBOX_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_MJPG;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_PNG;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_RLE;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.ENCODING_BITMAP_IMAGE;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_ANIMATION;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_JPEG;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_PNG;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_RAW;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.AudioFormatKeys.*;
+
+import org.monte.media.FormatKeys.MediaType;
 
 /**
  * {@code DefaultRegistry}. 

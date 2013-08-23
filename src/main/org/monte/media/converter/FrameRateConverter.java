@@ -10,15 +10,22 @@
  */
 package org.monte.media.converter;
 
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+
 import org.monte.media.AbstractVideoCodec;
 import org.monte.media.Buffer;
 import org.monte.media.Format;
-import java.util.ArrayList;
+import org.monte.media.FormatKeys.MediaType;
 import org.monte.media.math.Rational;
-import java.awt.image.BufferedImage;
-import static java.lang.Math.*;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
 
 /**
  * This codec converts frames from one frame rate into another.

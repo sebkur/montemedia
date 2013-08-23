@@ -11,7 +11,8 @@
 
 package org.monte.media.anim;
 
-import org.monte.media.eightsvx.*;
+import org.monte.media.eightsvx.EightSVXAudioClip;
+import org.monte.media.eightsvx.LoopableAudioClip;
 
 
 /**

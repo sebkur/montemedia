@@ -10,25 +10,57 @@
  */
 package org.monte.media.avi;
 
+import static org.monte.media.AudioFormatKeys.ChannelsKey;
+import static org.monte.media.AudioFormatKeys.ENCODING_ALAW;
+import static org.monte.media.AudioFormatKeys.ENCODING_MP3;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_SIGNED;
+import static org.monte.media.AudioFormatKeys.ENCODING_PCM_UNSIGNED;
+import static org.monte.media.AudioFormatKeys.ENCODING_ULAW;
+import static org.monte.media.AudioFormatKeys.FrameSizeKey;
+import static org.monte.media.AudioFormatKeys.SampleRateKey;
+import static org.monte.media.AudioFormatKeys.SampleSizeInBitsKey;
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.COMPRESSOR_NAME_QUICKTIME_RAW;
+import static org.monte.media.VideoFormatKeys.CompressorNameKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_DIB;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_MJPG;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_PNG;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_RLE;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.QualityKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
+import java.awt.image.BufferedImage;
+import java.awt.image.IndexColorModel;
+import java.io.File;
+import java.io.IOException;
+import java.nio.ByteOrder;
+import java.util.Arrays;
 import java.util.EnumSet;
-import org.monte.media.math.Rational;
-import org.monte.media.Format;
-import org.monte.media.Codec;
+
+import javax.imageio.stream.ImageOutputStream;
+
 import org.monte.media.Buffer;
+import org.monte.media.BufferFlag;
+import org.monte.media.Codec;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
 import org.monte.media.MovieWriter;
 import org.monte.media.Registry;
 import org.monte.media.io.ByteArrayImageOutputStream;
+import org.monte.media.math.Rational;
 import org.monte.media.riff.RIFFParser;
-import java.awt.image.BufferedImage;
-import java.awt.image.IndexColorModel;
-import java.io.*;
-import java.nio.ByteOrder;
-import java.util.Arrays;
-import javax.imageio.stream.*;
-import static org.monte.media.AudioFormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
-import org.monte.media.BufferFlag;
-import static org.monte.media.BufferFlag.*;
 
 /**
  * Provides high-level support for encoding and writing audio and video samples

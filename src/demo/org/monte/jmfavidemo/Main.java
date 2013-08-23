@@ -10,15 +10,19 @@
  */
 package org.monte.jmfavidemo;
 
-import com.sun.media.format.AviVideoFormat;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferUShort;
 import java.awt.image.IndexColorModel;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
+
 import javax.media.ControllerEvent;
 import javax.media.ControllerListener;
 import javax.media.DataSink;
@@ -42,6 +46,8 @@ import javax.media.protocol.DataSource;
 import javax.media.protocol.FileTypeDescriptor;
 import javax.media.protocol.PullBufferDataSource;
 import javax.media.protocol.PullBufferStream;
+
+import com.sun.media.format.AviVideoFormat;
 
 /**
  * {@code Main}.

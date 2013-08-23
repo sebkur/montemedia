@@ -10,27 +10,48 @@
  */
 package org.monte.media.avi;
 
+import static org.monte.media.BufferFlag.DISCARD;
+import static org.monte.media.BufferFlag.KEYFRAME;
+import static org.monte.media.BufferFlag.SAME_DATA;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
+import static org.monte.media.FormatKeys.MIME_AVI;
+import static org.monte.media.FormatKeys.MIME_JAVA;
+import static org.monte.media.FormatKeys.MIME_QUICKTIME;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.monte.media.VideoFormatKeys.COMPRESSOR_NAME_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.CompressorNameKey;
+import static org.monte.media.VideoFormatKeys.DataClassKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.ENCODING_BUFFERED_IMAGE;
+import static org.monte.media.VideoFormatKeys.FixedFrameRateKey;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorModel;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.Raster;
-import java.awt.Point;
 import java.awt.image.DirectColorModel;
-import java.awt.image.DataBufferByte;
-import java.awt.image.DataBuffer;
 import java.awt.image.IndexColorModel;
-import java.awt.image.ColorModel;
-import java.util.Hashtable;
-import org.monte.media.Format;
+import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import java.awt.Rectangle;
+import java.io.IOException;
+import java.util.Hashtable;
+
 import org.monte.media.AbstractVideoCodec;
 import org.monte.media.Buffer;
-import org.monte.media.io.SeekableByteArrayOutputStream;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 import org.monte.media.BufferFlag;
-import static org.monte.media.VideoFormatKeys.*;
-import static org.monte.media.BufferFlag.*;
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.io.SeekableByteArrayOutputStream;
 
 /**
  * {@code TechSmithCodec} (tscc) encodes a BufferedImage as a byte[] array. <p>

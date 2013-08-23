@@ -10,17 +10,19 @@
  */
 package org.monte.movieconverter;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.JFileChooser;
+
 import org.monte.media.DefaultMovie;
 import org.monte.media.Movie;
 import org.monte.media.MovieReader;
 import org.monte.media.Registry;
 import org.monte.media.gui.Worker;
 import org.monte.media.gui.datatransfer.DropFileTransferHandler;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.JFileChooser;
 
 /**
  * MovieConverterXMain.

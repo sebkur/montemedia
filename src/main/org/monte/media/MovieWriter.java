@@ -10,8 +10,9 @@
  */
 package org.monte.media;
 
-import org.monte.media.math.Rational;
 import java.io.IOException;
+
+import org.monte.media.math.Rational;
 
 /**
  * A simple API for writing movie data (audio and video) into a file.

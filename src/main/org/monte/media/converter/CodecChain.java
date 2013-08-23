@@ -4,12 +4,13 @@
  */
 package org.monte.media.converter;
 
-import org.monte.media.Buffer;
-import org.monte.media.Codec;
-import org.monte.media.Format;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.monte.media.Buffer;
+import org.monte.media.Codec;
+import org.monte.media.Format;
 
 /**
  * {@code CodecChain}.

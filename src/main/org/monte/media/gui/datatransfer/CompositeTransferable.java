@@ -11,9 +11,12 @@
 
 package org.monte.media.gui.datatransfer;
 
-import java.awt.datatransfer.*;
-import java.io.*;
-import java.util.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedList;
 /**
  *
  *

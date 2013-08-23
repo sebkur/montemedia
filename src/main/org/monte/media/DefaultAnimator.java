@@ -13,8 +13,11 @@
 
 package org.monte.media;
 
-import java.util.*;
-import javax.swing.event.*;
+import java.util.Vector;
+
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.EventListenerList;
 /**
  * DefaultAnimator.
  *

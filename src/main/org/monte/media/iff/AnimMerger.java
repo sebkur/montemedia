@@ -11,14 +11,27 @@
 
 package org.monte.media.iff;
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Enumeration;
+import java.util.Iterator;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+
 import org.monte.media.AbortException;
 import org.monte.media.ParseException;
 import org.monte.media.gui.Worker;
-import java.text.NumberFormat;
-import javax.swing.tree.*;
-import javax.swing.*;
-import java.io.*;
-import java.util.*;
 /**
  *
  * @author  werni

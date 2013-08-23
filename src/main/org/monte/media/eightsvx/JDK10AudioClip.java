@@ -10,7 +10,10 @@
  */
 package org.monte.media.eightsvx;
 
-import sun.audio.*;
+import sun.audio.AudioData;
+import sun.audio.AudioDataStream;
+import sun.audio.AudioPlayer;
+import sun.audio.ContinuousAudioDataStream;
 
 /**
  * A JDK 1.0 compatible audio clip for signed linear 8 encoded audio PCM samples.

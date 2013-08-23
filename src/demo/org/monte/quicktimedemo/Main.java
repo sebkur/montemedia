@@ -10,18 +10,33 @@
  */
 package org.monte.quicktimedemo;
 
-import org.monte.quicktimedemo.*;
-import org.monte.media.quicktime.QuickTimeReader;
-import org.monte.media.Buffer;
-import org.monte.media.math.Rational;
-import org.monte.media.quicktime.QuickTimeWriter;
-import org.monte.media.Format;
-import java.awt.*;
+import static org.monte.media.FormatKeys.EncodingKey;
+import static org.monte.media.FormatKeys.FrameRateKey;
+import static org.monte.media.FormatKeys.MediaTypeKey;
+import static org.monte.media.VideoFormatKeys.DepthKey;
+import static org.monte.media.VideoFormatKeys.ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_ANIMATION;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_JPEG;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_PNG;
+import static org.monte.media.VideoFormatKeys.ENCODING_QUICKTIME_RAW;
+import static org.monte.media.VideoFormatKeys.HeightKey;
+import static org.monte.media.VideoFormatKeys.QualityKey;
+import static org.monte.media.VideoFormatKeys.WidthKey;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.IndexColorModel;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
-import static org.monte.media.VideoFormatKeys.*;
+
+import org.monte.media.Format;
+import org.monte.media.FormatKeys.MediaType;
+import org.monte.media.math.Rational;
+import org.monte.media.quicktime.QuickTimeReader;
+import org.monte.media.quicktime.QuickTimeWriter;
 
 /**
  * Demonstrates the use of {@link QuickTimeReader} and {@link QuickTimeWriter}.

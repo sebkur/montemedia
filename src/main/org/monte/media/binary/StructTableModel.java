@@ -10,8 +10,9 @@
  */
 package org.monte.media.binary;
 
-import javax.swing.table.AbstractTableModel;
 import java.util.Vector;
+
+import javax.swing.table.AbstractTableModel;
 
 /**
  * Table model for structured binary data.
